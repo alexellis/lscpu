@@ -1,0 +1,2 @@
+# lscpu
+lscpu
