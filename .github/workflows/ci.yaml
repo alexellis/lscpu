@@ -15,6 +15,6 @@ jobs:
     - name: Write to workflow job summary
       run: |
         HEADER=$'# Summary for: ${{matrix.name}}\n'
+        SEP=$'```\n'
         RET=$(lscpu)
-        SUMMARY=$'# Testing Job Summary\n## Second Level Heading\nHello GitHub'
-        echo "$HEADER$RET" >> $GITHUB_STEP_SUMMARY
+        echo "$HEADER$SEP$RET$SEP" >> $GITHUB_STEP_SUMMARY
